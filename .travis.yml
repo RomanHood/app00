@@ -8,9 +8,8 @@ cache:
 before_install:
 install: npm install
 before_script:
-script: 
+script:
   - npm run test
-  - echo 'hellooo'
 env:
   global:
   - NODE_ENV: test
