@@ -8,19 +8,9 @@ cache:
 before_install:
 install: npm install
 before_script:
-script: npm run test
+script: 
+  - npm run test
+  - echo 'hellooo'
 env:
   global:
   - NODE_ENV: test
-  - PG_CONNECTION: postgres://postgres:@127.0.0.1/testdb
-  - POSTGRES_USER: postgres
-  - POSTGRES_PASSWORD: postgres
-  - POSTGRES_HOST: localhost
-  - POSTGRES_DB: testdb
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: echo 'helloooo'
-  on:
-    branch: master
